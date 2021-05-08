@@ -1,12 +1,5 @@
 import faker from 'faker';
-
-interface PersonProps {
-    name: string,
-    photo: string,
-    pokemons: number[],
-    wons: number[],
-    power: number
-};
+import PersonProps from '../interface/Person';
 
 const generatePokemons = () => {
     const pokemons: Array<number> = [];
@@ -20,7 +13,7 @@ const generatePokemons = () => {
 const generateWons = () => {
     const wons: Array<number> = [];
     for(var i = 0; i < 5; i++){
-        wons.push(Math.floor(Math.random() * 100) + 1);
+        wons.push(Math.floor(Math.random() * 99));
     }
 
     return wons;
