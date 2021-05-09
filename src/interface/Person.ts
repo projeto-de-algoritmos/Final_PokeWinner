@@ -1,7 +1,7 @@
 interface PersonProps {
     name: string,
     photo: string,
-    pokemons: number[],
+    pokemons: any[],
     wons: number[],
     power: number
 };

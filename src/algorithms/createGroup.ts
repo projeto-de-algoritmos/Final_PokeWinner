@@ -4,7 +4,7 @@ import PersonProps from '../interface/Person';
 const generatePokemons = () => {
     const pokemons: Array<number> = [];
     for(var i = 0; i < 6; i++){
-        pokemons.push(Math.floor(Math.random() * 1118) + 1);
+        pokemons.push(Math.floor(Math.random() * 898) + 1);
     }
 
     return pokemons;
