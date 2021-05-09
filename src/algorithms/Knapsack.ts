@@ -1,15 +1,9 @@
-interface branchParams {
-    value: number,
-    weight: number
-  };  
-
-export default function knapsack(items: Array<branchParams>, capacity: number){
-    var memo:any = [];
-  
+export default function knapsack(items: Array<any>, capacity: number, param: string){
+    var memo:any = []; 
     for (var i = 0; i < items.length; i++) {
       var row = [];
       for (var cap = 1; cap <= capacity; cap++) {
-        row.push(getSolution(i,cap));
+        row.push(getSolution(i,cap, param));
       }
       memo.push(row);
     }
@@ -21,7 +15,7 @@ export default function knapsack(items: Array<branchParams>, capacity: number){
       return lastRow[lastRow.length - 1];
     }
   
-    function getSolution(row: number,cap: number){
+    function getSolution(row: number,cap: number, mode: string){
       const NO_SOLUTION = {maxValue:0, subset:[]};
       var col = cap - 1;
       var lastItem = items[row];
@@ -33,7 +27,25 @@ export default function knapsack(items: Array<branchParams>, capacity: number){
       }
       var lastValue = lastSolution.maxValue;
       var lastSubValue = lastSubSolution.maxValue;
-      var newValue = lastSubValue + lastItem.value;
+      var newValue;
+      if(mode === 'hp'){
+        newValue = lastSubValue + lastItem.stats[0].base_stat;
+      }
+      else if(mode === 'attack'){
+        newValue = lastSubValue + lastItem.stats[1].base_stat;
+      }
+      else if(mode === 'defense'){
+        newValue = lastSubValue + lastItem.stats[2].base_stat;
+      }
+      else if(mode === 'special-attack'){
+        newValue = lastSubValue + lastItem.stats[3].base_stat;
+      }
+      else if(mode === 'special-defense'){
+        newValue = lastSubValue + lastItem.stats[4].base_stat;
+      }
+      else if(mode === 'speed'){
+        newValue = lastSubValue + lastItem.stats[5].base_stat;
+      }
       if(newValue >= lastValue){
         var _lastSubSet = lastSubSolution.subset.slice();
         _lastSubSet.push(lastItem);
