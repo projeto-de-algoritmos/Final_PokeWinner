@@ -1,44 +1,66 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
+# FINAL - POKE WINNER
 
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
-
-# NomedoProjeto
-
-**Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Número da Lista**: 10<br>
+**Conteúdo da Disciplina**: Projeto Final<br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 15/0120371  |  Bruno Oliveira Dantas |
+| 17/0031438 |  Dâmaso Júnio Pereira Brasileo |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+
+O `PokeWinner` é um seletor de vencedores... Tá, mas e ai?
+
+Pode parecer simples, mas muito lógica foi utilizada por trás.
+
+Primeiramente são selecionados desde os primórdios do mundo Pokemon, 100 treinadores muito engajados em querer ser o campeão. Mas claro que só podemos ter 1 vencedor no final, então você vai ser aquele que vai "escolher" o vencedor pela característica que você acha mais importante. Dito isso, é feita uma escolha bastante crucial.
+Cada treinador tem sua força própria, e então são selecionados a partir de uma busca no grafo de batalhas dos treinadores os melhores, e então o vencedor está entre esses que então é avaliado a força dos seus pokemons.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+
+![](src/assets/pokewinner1.png)
+
+![](src/assets/pokewinner2.png)
+
+![](src/assets/pokewinner3.png)
+
+## Vídeo
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+
+**Linguagem**: TypeScript<br>
+**Framework**: ReactJS com Chakra UI<br>
+
+Para instalação do projeto, é necessário executar os seguintes comandos:
+```
+git clone https://github.com/projeto-de-algoritmos/Final_PokeWinner
+
+cd Final_PokeWinner
+
+yarn install
+```
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+
+Para execução do projeto é necessário, após a instalação:
+```
+cd DC_BatalhaHerois
+cd app
+
+yarn start
+```
 
 ## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+O comando `yarn` pode ser trocado por `npm`:
+```
+npm install
+
+npm start
+```
+
+É necessário ter o `NPM` ou `YARN` instalado.
 
 
 

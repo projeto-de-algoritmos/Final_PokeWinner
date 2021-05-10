@@ -6,14 +6,14 @@ import trophy from '../assets/trophy.png';
 import { Image } from '@chakra-ui/image';
 import TypeTotem from '../components/typeTotem';
 import PokemonCard from '../components/pokemonCard';
+import { Button } from '@chakra-ui/button';
+import { useHistory } from 'react-router-dom';
 
 
 const Winner: React.FC = () => {
+  const history = useHistory();
   const location: any = useLocation();
   const [winner] = useState<PersonProps>(location.state);
-  console.log(winner);
-
-  
 
   return (
     <Box 
@@ -69,7 +69,18 @@ const Winner: React.FC = () => {
         
         </Grid>
       </Box>
-
+      <Button 
+        pos="absolute" 
+        bottom="20px" 
+        right="20px" 
+        background="rgba(204,30,30,1)" 
+        color="#FFF" 
+        transition=".8s all" 
+        _hover={{background: "rgba(0,212,255,1)"}}
+        onClick={() => history.push('/')}
+      >
+        Voltar ao inicio
+      </Button>
     </Box>
   );
 }
