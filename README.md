@@ -28,6 +28,8 @@ Cada treinador tem sua força própria, e então são selecionados a partir de u
 
 ## Vídeo
 
+O vídeo está em .rar por conta do tamanho do arquivo, pode ser encontrado no link: https://github.com/projeto-de-algoritmos/Final_PokeWinner/blob/master/V%C3%ADdeo%20Explicativo.rar
+
 ## Instalação 
 
 **Linguagem**: TypeScript<br>
